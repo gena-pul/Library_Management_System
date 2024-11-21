@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Forty by HTML5 UP</title>
+		<title>Manage Authors/Patrons</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -29,9 +29,9 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="landing.html">Add Book</a></li>
+							<li><a href="generic.html">Manage Authors/Patrons</a></li>
+							<li><a href="elements.html">Track Borrowed Books</a></li>
 						</ul>
 						<ul class="actions stacked">
 							<li><a href="#" class="button primary fit">Get Started</a></li>
@@ -44,15 +44,72 @@
 
 						<!-- One -->
 							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h1>Generic</h1>
-									</header>
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-								</div>
+								
+													<section>
+									<a href="generic.html" class="image">
+										<img src="images/pic09.jpg" alt="" data-position="top center" />
+									</a>
+									<!-- Manage Authors Section -->
+        <div class="section" id="manage-authors">
+            <h2>Manage Authors</h2>
+            <form action="manage_author.php" method="POST">
+                <label for="action">Action (add/update/delete):</label>
+                <select name="action" class="form-input" required>
+                    <option value="add">Add</option>
+                    <option value="update">Update</option>
+                    <option value="delete">Delete</option>
+                </select><br>
+
+                <div id="author_details">
+                    <label for="author_name">Author Name:</label>
+                    <input type="text" name="author_name" class="form-input" required><br>
+
+                    <label for="nationality">Nationality:</label>
+                    <input type="text" name="nationality" class="form-input" required><br>
+
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" name="birthdate" class="form-input" required><br>
+                </div>
+
+                <label for="author_id">Author ID (for update/delete):</label>
+                <input type="number" name="author_id" class="form-input"><br>
+
+                <button type="submit" class="form-button">Submit</button>
+            </form>
+        </div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
+										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
+									</a>
+ <!-- Manage Patrons Section -->
+        <div class="section" id="manage-patrons">
+            <h2>Manage Patrons</h2>
+            <form action="manage_patrons.php" method="POST">
+                <label for="action">Action (add/update/delete):</label>
+                <select name="action" class="form-input" required>
+                    <option value="add">Add</option>
+                    <option value="update">Update</option>
+                    <option value="delete">Delete</option>
+                </select><br>
+
+                <!-- For add and update actions -->
+                <div id="patron_details">
+                    <label for="patron_name">Patron Name:</label>
+                    <input type="text" name="name" class="form-input" required><br>
+
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" class="form-input"><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="text" name="phone" class="form-input"><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" class="form-input" required><br>
+                </div>
+								</section>
+							</section>
+
 							</section>
 
 					</div>
