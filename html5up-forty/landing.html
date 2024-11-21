@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Landing - Forty by HTML5 UP</title>
+		<title>Add A Book</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -101,33 +101,64 @@
 									<a href="generic.html" class="image">
 										<img src="images/pic09.jpg" alt="" data-position="top center" />
 									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Rhoncus magna</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
+									<!-- Manage Authors Section -->
+        <div class="section" id="manage-authors">
+            <h2>Manage Authors</h2>
+            <form action="manage_author.php" method="POST">
+                <label for="action">Action (add/update/delete):</label>
+                <select name="action" class="form-input" required>
+                    <option value="add">Add</option>
+                    <option value="update">Update</option>
+                    <option value="delete">Delete</option>
+                </select><br>
+
+                <div id="author_details">
+                    <label for="author_name">Author Name:</label>
+                    <input type="text" name="author_name" class="form-input" required><br>
+
+                    <label for="nationality">Nationality:</label>
+                    <input type="text" name="nationality" class="form-input" required><br>
+
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" name="birthdate" class="form-input" required><br>
+                </div>
+
+                <label for="author_id">Author ID (for update/delete):</label>
+                <input type="number" name="author_id" class="form-input"><br>
+
+                <button type="submit" class="form-button">Submit</button>
+            </form>
+        </div>
 								</section>
 								<section>
 									<a href="generic.html" class="image">
 										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
 									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Sed nunc ligula</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
+ <!-- Manage Patrons Section -->
+        <div class="section" id="manage-patrons">
+            <h2>Manage Patrons</h2>
+            <form action="manage_patrons.php" method="POST">
+                <label for="action">Action (add/update/delete):</label>
+                <select name="action" class="form-input" required>
+                    <option value="add">Add</option>
+                    <option value="update">Update</option>
+                    <option value="delete">Delete</option>
+                </select><br>
+
+                <!-- For add and update actions -->
+                <div id="patron_details">
+                    <label for="patron_name">Patron Name:</label>
+                    <input type="text" name="name" class="form-input" required><br>
+
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" class="form-input"><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="text" name="phone" class="form-input"><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" class="form-input" required><br>
+                </div>
 								</section>
 							</section>
 
